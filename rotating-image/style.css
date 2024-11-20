@@ -1,0 +1,29 @@
+/* Styling untuk container (opsional) */
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Agar gambar berada di tengah */
+  background-color: #f4f4f4; /* Warna latar opsional */
+  perspective: 1000px; /* Memberikan efek 3D */
+}
+
+/* Gambar yang berputar */
+.rotating-image {
+  width: 200px;
+  height: 200px; /* Atur ukuran gambar sesuai keinginan */
+  animation: rotate-horizontal 4s ease-in-out infinite;
+}
+
+/* Keyframes untuk rotasi horizontal */
+@keyframes rotate-horizontal {
+  0% {
+    transform: rotateY(0deg); /* Mulai dari posisi normal */
+  }
+  50% {
+    transform: rotateY(360deg); /* Berputar 360 derajat selama 3 detik */
+  }
+  100% {
+    transform: rotateY(360deg); /* Diam di posisi ini selama 1 detik */
+  }
+}
